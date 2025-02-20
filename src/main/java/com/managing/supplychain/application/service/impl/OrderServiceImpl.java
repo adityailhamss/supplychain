@@ -4,7 +4,7 @@ import com.managing.supplychain.application.dto.request.CreateOrderRequest;
 import com.managing.supplychain.application.dto.request.UpdateOrderRequest;
 import com.managing.supplychain.application.dto.response.OrderResponse;
 import com.managing.supplychain.application.mapper.OrderApplicationMapper;
-import com.managing.supplychain.application.service.OrderService;
+import com.managing.supplychain.application.service.interfaces.OrderService;
 import com.managing.supplychain.common.exception.ResourceNotFoundException;
 import com.managing.supplychain.domain.model.aggregates.Order;
 import com.managing.supplychain.domain.repository.OrderRepository;
@@ -36,7 +36,7 @@ public class OrderServiceImpl implements OrderService{
         Order existingOrder = OrderRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Order not found"));
 
-        OrderMapper.updateOrder(existingOrder, request); // Updates existing Order in place
+        OrderMapper.updateOrder(existingOrder, request);
 
         OrderDomainService.validateOrder(existingOrder);
         Order savedOrder = OrderRepository.save(existingOrder);

@@ -23,9 +23,9 @@ public class OrderDomainService {
                 .orElse(BigDecimal.ZERO);
         System.out.println("DEBUG: Order total amount = " + totalAmount);
 
-//        if (totalAmount.compareTo(BigDecimal.ZERO) <= 0) {
-//            throw new IllegalArgumentException("Order amount must be greater than zero");
-//        }
+        if (totalAmount.compareTo(BigDecimal.ZERO) <= 0) {
+            throw new IllegalArgumentException("Order amount must be greater than zero");
+        }
     }
 
 }

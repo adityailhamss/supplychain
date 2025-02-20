@@ -3,7 +3,7 @@ package com.managing.supplychain.web.controller;
 import com.managing.supplychain.application.dto.request.CreateProductRequest;
 import com.managing.supplychain.application.dto.request.UpdateProductRequest;
 import com.managing.supplychain.application.dto.response.ProductResponse;
-import com.managing.supplychain.application.service.ProductService;
+import com.managing.supplychain.application.service.interfaces.ProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -22,13 +22,13 @@ public class OrderEntity {
     @Column(name = "order_date")
     private LocalDateTime orderDate;
 
-    @Column(name="status",columnDefinition = "varchar")
+    @Column(name="status",columnDefinition = "varchar", nullable = false)
     private String status;
 
-    @Column(name = "total_amount", precision = 10, scale = 2)
+    @Column(name = "total_amount", precision = 10, scale = 2, nullable = false)
     private BigDecimal totalAmount;
 
-    @Column(name = "shipping_address")
+    @Column(name = "shipping_address", nullable = false)
     private String shippingAddress;
 
     @Column(name = "tracking_number")

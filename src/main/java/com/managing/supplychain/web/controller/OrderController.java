@@ -3,7 +3,7 @@ package com.managing.supplychain.web.controller;
 import com.managing.supplychain.application.dto.request.CreateOrderRequest;
 import com.managing.supplychain.application.dto.request.UpdateOrderRequest;
 import com.managing.supplychain.application.dto.response.OrderResponse;
-import com.managing.supplychain.application.service.OrderService;
+import com.managing.supplychain.application.service.interfaces.OrderService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -36,6 +36,7 @@ public class OrderController {
 
     @GetMapping
     public ResponseEntity<List<OrderResponse>> getAllOrders() {
+
         return ResponseEntity.ok(OrderService.getAllOrders());
     }
 

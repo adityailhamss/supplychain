@@ -4,7 +4,7 @@ import com.managing.supplychain.application.dto.request.CreateProductRequest;
 import com.managing.supplychain.application.dto.request.UpdateProductRequest;
 import com.managing.supplychain.application.dto.response.ProductResponse;
 import com.managing.supplychain.application.mapper.ProductApplicationMapper;
-import com.managing.supplychain.application.service.ProductService;
+import com.managing.supplychain.application.service.interfaces.ProductService;
 import com.managing.supplychain.common.exception.ResourceNotFoundException;
 import com.managing.supplychain.domain.model.aggregates.Product;
 import com.managing.supplychain.domain.repository.ProductRepository;

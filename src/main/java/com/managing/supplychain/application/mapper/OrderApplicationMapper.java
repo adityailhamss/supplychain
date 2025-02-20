@@ -11,7 +11,6 @@ import com.managing.supplychain.application.dto.response.OrderResponse;
 @Mapper(componentModel = "spring", implementationName = "ApplicationOrderMapperImpl")
 public interface OrderApplicationMapper {
     @Mapping(target = "id", ignore = true)
-//    @Mapping(target = "orderDate", ignore = true)
     @Mapping(target = "createdAt", ignore = true)
     @Mapping(target = "updatedAt", ignore = true)
     Order toOrder(CreateOrderRequest request);
